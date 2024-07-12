@@ -1,9 +1,9 @@
 import express from "express";
 import { MongoClient, ObjectId } from "mongodb";
+import dotenv from "dotenv";
 
-
-const url =
-  "mongodb+srv://callipter:ANdroid-59115-mon@cluster0.lodezpl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+dotenv.config()
+const url = process.env.MONGO_URI;
 
 const client = new MongoClient(url);
 
